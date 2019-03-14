@@ -18,6 +18,14 @@
   version = "v1.0.0"
 
 [[projects]]
+  digest = "1:9059915429f7f3a5f18cfa6b7cab9a28721d7ac6db4079a62044aa229eb7f2a8"
+  name = "github.com/gobuffalo/envy"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "fa0dfdc10b5366ce365b7d9d1755a03e4e797bc5"
+  version = "v1.6.15"
+
+[[projects]]
   digest = "1:abea725bcf0210887f5da19d804fffa1dd45a42a56bdf5f02322345e3fee4f0d"
   name = "github.com/gogo/protobuf"
   packages = [
@@ -129,6 +137,22 @@
   version = "v0.5.0"
 
 [[projects]]
+  digest = "1:406338ad39ab2e37b7f4452906442a3dbf0eb3379dd1f06aafb5c07e769a5fbb"
+  name = "github.com/inconshreveable/mousetrap"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
+  version = "v1.0"
+
+[[projects]]
+  digest = "1:da62aa6632d04e080b8a8b85a59ed9ed1550842a0099a55f3ae3a20d02a3745a"
+  name = "github.com/joho/godotenv"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "23d116af351c84513e1946b527c88823e476be13"
+  version = "v1.3.0"
+
+[[projects]]
   digest = "1:0243cffa4a3410f161ee613dfdd903a636d07e838a42d341da95d81f42cd1d41"
   name = "github.com/json-iterator/go"
   packages = ["."]
@@ -156,6 +180,14 @@
   ]
   pruneopts = "UT"
   revision = "89e4aae358be056ee70b595c20106a4a5c70fdc1"
+
+[[projects]]
+  digest = "1:56dbf15e091bf7926cb33a57cb6bdfc658fc6d3498d2f76f10a97ce7856f1fde"
+  name = "github.com/markbates/inflect"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "24b83195037b3bc61fcda2d28b7b0518bce293b6"
+  version = "v1.0.4"
 
 [[projects]]
   digest = "1:2f42fa12d6911c7b7659738758631bec870b7e9b4c6be5444f963cdcfccc191f"
@@ -190,12 +222,51 @@
   version = "v2.0.1"
 
 [[projects]]
+  digest = "1:14715f705ff5dfe0ffd6571d7d201dd8e921030f8070321a79380d8ca4ec1a24"
+  name = "github.com/pkg/errors"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "ba968bfe8b2f7e042a574c888954fccecfa385b4"
+  version = "v0.8.1"
+
+[[projects]]
+  digest = "1:e09ada96a5a41deda4748b1659cc8953961799e798aea557257b56baee4ecaf3"
+  name = "github.com/rogpeppe/go-internal"
+  packages = [
+    "modfile",
+    "module",
+    "semver",
+  ]
+  pruneopts = "NUT"
+  revision = "1cf9852c553c5b7da2d5a4a091129a7822fed0c9"
+  version = "v1.2.2"
+
+[[projects]]
   digest = "1:d917313f309bda80d27274d53985bc65651f81a5b66b820749ac7f8ef061fd04"
   name = "github.com/sergi/go-diff"
   packages = ["diffmatchpatch"]
   pruneopts = "NUT"
   revision = "1744e2970ca51c86172c8190fadad617561ed6e7"
   version = "v1.0.0"
+
+[[projects]]
+  digest = "1:90cf76d709ce9b057e7d75bd245bf7c1242d21ba4f908fb22c7a2a96d1dcc0ca"
+  name = "github.com/spf13/afero"
+  packages = [
+    ".",
+    "mem",
+  ]
+  pruneopts = "NUT"
+  revision = "f4711e4db9e9a1d3887343acb72b2bbfc2f686f5"
+  version = "v1.2.1"
+
+[[projects]]
+  digest = "1:343d44e06621142ab09ae0c76c1799104cdfddd3ffb445d78b1adf8dc3ffaf3d"
+  name = "github.com/spf13/cobra"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "ef82de70bb3f60c65fb8eebacbb2d122ef517385"
+  version = "v0.0.3"
 
 [[projects]]
   digest = "1:9d8420bbf131d1618bde6530af37c3799340d3762cc47210c1d9532a4c3a2779"
@@ -366,6 +437,17 @@
   version = "kubernetes-1.12.6"
 
 [[projects]]
+  digest = "1:8b06dd9f107e7f50eb439698af99f40028a85ae334060f3de0171f70fde86009"
+  name = "k8s.io/apiextensions-apiserver"
+  packages = [
+    "pkg/apis/apiextensions",
+    "pkg/apis/apiextensions/v1beta1",
+  ]
+  pruneopts = "NUT"
+  revision = "0fe22c71c47604641d9aa352c785b7912c200562"
+  version = "kubernetes-1.13.1"
+
+[[projects]]
   digest = "1:b172899fc4b03d2bda3c223706822b3cf801b2a63ce4740dda0fe8206db97017"
   name = "k8s.io/apimachinery"
   packages = [
@@ -502,6 +584,23 @@
   pruneopts = "NUT"
   revision = "e3762e86a74c878ffed47484592986685639c2cd"
 
+[[projects]]
+  digest = "1:f42a4b988ddebb6c5b25705bcbe9ecc4056306fa27cd99996b38da5094a2c9a2"
+  name = "sigs.k8s.io/controller-tools"
+  packages = [
+    "cmd/crd",
+    "cmd/crd/cmd",
+    "pkg/crd/generator",
+    "pkg/crd/util",
+    "pkg/internal/codegen",
+    "pkg/internal/codegen/parse",
+    "pkg/internal/general",
+    "pkg/util",
+  ]
+  pruneopts = "NUT"
+  revision = "fbf141159251d035089e7acdd5a343f8cec91b94"
+  version = "v0.1.9"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
@@ -534,6 +633,7 @@
     "k8s.io/code-generator/cmd/defaulter-gen",
     "k8s.io/code-generator/cmd/informer-gen",
     "k8s.io/code-generator/cmd/lister-gen",
+    "sigs.k8s.io/controller-tools/cmd/crd",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
