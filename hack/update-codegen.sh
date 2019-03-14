@@ -18,8 +18,8 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-REPO_ROOT=$(dirname ${BASH_SOURCE})/..
-CODEGEN_PKG=${CODEGEN_PKG:-$(cd ${REPO_ROOT}; ls -d -1 ./vendor/k8s.io/code-generator 2>/dev/null || echo ../code-generator)}
+REPO_ROOT_DIR=$(dirname ${BASH_SOURCE})/..
+CODEGEN_PKG=${CODEGEN_PKG:-$(cd ${REPO_ROOT_DIR}; ls -d -1 ./vendor/k8s.io/code-generator 2>/dev/null || echo ../code-generator)}
 
 # generate the code with:
 # --output-base    because this script should also be able to run inside the vendor dir of
@@ -28,7 +28,12 @@ CODEGEN_PKG=${CODEGEN_PKG:-$(cd ${REPO_ROOT}; ls -d -1 ./vendor/k8s.io/code-gene
 ${CODEGEN_PKG}/generate-groups.sh "deepcopy,client,informer,lister" \
   github.com/knative/caching/pkg/client github.com/knative/caching/pkg/apis \
   "caching:v1alpha1" \
-  --go-header-file ${REPO_ROOT}/hack/boilerplate/boilerplate.go.txt
+  --go-header-file ${REPO_ROOT_DIR}/hack/boilerplate/boilerplate.go.txt
 
 # Make sure our dependencies are up-to-date
-${REPO_ROOT}/hack/update-deps.sh
+${REPO_ROOT_DIR}/hack/update-deps.sh
+
+# Generate CRD validation schema, needs to execute at project root.
+cd ${REPO_ROOT_DIR} || return 1
+go install ${REPO_ROOT_DIR}/vendor/sigs.k8s.io/controller-tools/cmd/crd
+${GOPATH}/bin/crd generate --domain knative.dev
